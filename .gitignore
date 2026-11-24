@@ -1,0 +1,17 @@
+### 2. `.gitignore`
+```gitignore
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & IDE folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs & temporary files
+*.log
+tmp/
+temp/

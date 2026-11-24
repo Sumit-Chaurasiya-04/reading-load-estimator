@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reading-Time & Cognitive-Load Estimator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Reading-Time & Cognitive-Load Estimator</h1>
+      <p class="subtitle">
+        Estimate realistic reading times by factoring in vocabulary complexity and code density.
+      </p>
+    </header>
+
+    <section class="input-section">
+      <div class="controls">
+        <button id="sample-btn" type="button" class="btn secondary">Load Sample Technical Text</button>
+        <button id="clear-btn" type="button" class="btn ghost">Clear</button>
+      </div>
+      <textarea
+        id="text-input"
+        rows="10"
+        placeholder="Paste an article, research abstract, or technical documentation here..."
+        aria-label="Text to analyze"
+      ></textarea>
+      <button id="analyze-btn" type="button" class="btn primary">Analyze Text</button>
+    </section>
+
+    <section class="results-grid" aria-live="polite">
+      <article class="card">
+        <h2>Word Count</h2>
+        <p id="word-count" class="metric">0</p>
+        <span id="sentence-count" class="detail">0 sentences</span>
+      </article>
+
+      <article class="card">
+        <h2>Standard Time</h2>
+        <p id="standard-time" class="metric">0 min</p>
+        <span class="detail">At 238 WPM (average)</span>
+      </article>
+
+      <article class="card highlight">
+        <h2>Adjusted Tech Time</h2>
+        <p id="adjusted-time" class="metric">0 min</p>
+        <span id="penalty-detail" class="detail">No complexity penalty</span>
+      </article>
+
+      <article class="card">
+        <h2>Cognitive Load</h2>
+        <p id="complexity-label" class="metric">—</p>
+        <span id="grade-level" class="detail">Grade Level: —</span>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
